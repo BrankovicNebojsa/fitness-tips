@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('workout', function (Blueprint $table) {
+        Schema::table('workouts', function (Blueprint $table) {
             $table->renameColumn('difficulty_level','difficulty');
         });
     }
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('workout', function (Blueprint $table) {
+        Schema::table('workouts', function (Blueprint $table) {
             $table->renameColumn('difficulty','difficulty_level');
         });
     }

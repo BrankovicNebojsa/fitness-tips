@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('workout', function (Blueprint $table) {
+        Schema::table('workouts', function (Blueprint $table) {
             $table->foreignId('user_id')->default(0);
         });
     }
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('workout', function (Blueprint $table) {
+        Schema::table('workouts', function (Blueprint $table) {
             $table->dropForeign('user_id');
         });
     }
