@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\WorkoutResource;
 
 class UserResource extends JsonResource
 {
@@ -16,11 +17,14 @@ class UserResource extends JsonResource
     public static $wrap = 'user';
     public function toArray($request)
     {
+        // return parent::toArray($request);
+
         return [
             'id' => $this->resource->id,
             'name' => $this->resource->name,
             'email' => $this->resource->email,
             'workouts' => WorkoutResource::collection($this->resource->workouts)
+
         ];
     }
 }
