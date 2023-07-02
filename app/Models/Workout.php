@@ -15,6 +15,7 @@ class Workout extends Model
         'workout_duration',
         'difficulty',
         'description',
+        'user_id'
     ];
 
     public function exercise() {

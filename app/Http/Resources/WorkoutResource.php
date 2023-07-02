@@ -24,7 +24,8 @@ class WorkoutResource extends JsonResource
             'difficulty' => $this->resource->difficulty,
             'description' => $this->resource->description,
             'equipment' => $this->resource->equipment,
-            'exercise' => $this->resource->exercise
+            'exercise' => $this->resource->exercise,
+            'user_id' => $this->resource->user
         ];
     }
 }

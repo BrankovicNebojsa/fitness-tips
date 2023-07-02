@@ -45,7 +45,8 @@ class WorkoutController extends Controller
                 'title' => 'required',
                 'workout_duration' => 'required',
                 'difficulty' => 'required',
-                'description' => 'required'
+                'description' => 'required',
+                'user_id' => 'required'
             ]);
         } catch (\Illuminate\Validation\ValidationException $th) {
             return response()->json("There are empty fields. All fields are required.", 400);
