@@ -70,7 +70,7 @@ class WorkoutController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Recipe  $recipe
+     * @param  \App\Models\Workout  $workout
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -87,12 +87,12 @@ class WorkoutController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Recipe  $recipe
+     * @param  \App\Models\Workout  $workout
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $tempWorkout = Recipe::find($id);
+        $tempWorkout = Workout::find($id);
         if (is_null($tempWorkout)) {
             return response()->json("Workout with id $id doesn't exist.");
         }
